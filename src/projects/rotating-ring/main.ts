@@ -1,4 +1,4 @@
-import './style.css'
+import '../../style.css'
 import * as THREE from 'three'
 
 const scene = new THREE.Scene()
@@ -31,17 +31,6 @@ scene.add(ambientLight)
 const gridHelper = new THREE.GridHelper(100)
 
 scene.add(gridHelper)
-
-const setGrabControls = () => {
-  bgElement?.addEventListener('mousedown', (e: MouseEvent) => {
-    const initialX = e.x
-    const initialY = e.y
-
-    console.log(initialX, initialY)
-  })
-}
-
-setGrabControls()
 
 const animate = () => {
   requestAnimationFrame(animate);
